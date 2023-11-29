@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  cnt1:
+    image: busybox
+    command: sh -c "while true; do echo 'Container 1 is running...'; sleep 1; done"
+
+  cnt2:
+    image: busybox
+    command: sh -c "while true; do echo 'Container 2 is running...'; sleep 1; done"
+
+  nginx:
+    image: nginx
+    ports:
+      - "80:81"
